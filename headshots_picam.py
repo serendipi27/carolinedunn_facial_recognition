@@ -1,6 +1,7 @@
 import cv2
 from picamera import PiCamera
 from picamera.array import PiRGBArray
+import os
 
 #path = '/Users/jsha/Projects/opencv_tutorial/carolinedunn_facial_recognition/'
 path = '/home/pi/carolinedunn_facial_recognition/'
