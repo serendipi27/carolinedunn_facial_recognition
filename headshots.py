@@ -1,6 +1,14 @@
 import cv2
+import os
 
-name = 'Caroline' #replace with your name
+#path = '/Users/jsha/Projects/opencv_tutorial/carolinedunn_facial_recognition/'
+path = '/home/pi/carolinedunn_facial_recognition/'
+name = 'cometdongari' #replace with your name
+
+if not os.path.exists(path + f'dataset/{name}'):
+    os.makedirs(path + f'dataset/{name}')
+
+save_image_dir = path + f'dataset/{name}'
 
 cam = cv2.VideoCapture(0)
 
@@ -23,7 +31,7 @@ while True:
         break
     elif k%256 == 32:
         # SPACE pressed
-        img_name = "dataset/"+ name +"/image_{}.jpg".format(img_counter)
+        img_name = save_image_dir + "/image_{}.jpg".format(img_counter)
         cv2.imwrite(img_name, frame)
         print("{} written!".format(img_name))
         img_counter += 1
