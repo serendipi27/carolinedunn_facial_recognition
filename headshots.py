@@ -2,7 +2,7 @@ import cv2
 import os
 
 #path = '/Users/jsha/Projects/opencv_tutorial/carolinedunn_facial_recognition/'
-path = '/home/pi/carolinedunn_facial_recognition/'
+path = os.getcwd()
 name = 'cometdongari' #replace with your name
 
 if not os.path.exists(path + f'dataset/{name}'):
