@@ -6,14 +6,15 @@ import imutils
 import pickle
 import time
 import cv2
+
+#import gpio
 import RPi.GPIO as GPIO
 import time
 
-# Set up gpio pins
+# set up gpio pins
 GPIO.setmode(GPIO.BCM)
 green = 17
 GPIO.setup(green, GPIO.OUT)
-
 
 #Initialize 'currentname' to trigger only when a new person is identified.
 currentname = "unknown"
