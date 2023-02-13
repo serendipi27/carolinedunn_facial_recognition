@@ -6,11 +6,10 @@ import os
 #path = '/Users/jsha/Projects/opencv_tutorial/carolinedunn_facial_recognition/'
 path = os.getcwd() 
 name = 'cometdongari' #replace with your name
+save_image_dir = path + f'/dataset/{name}'
 
-if not os.path.exists(path + f'dataset/{name}'):
-    os.makedirs(path + f'dataset/{name}')
-
-save_image_dir = path + f'dataset/{name}'
+if not os.path.exists(save_image_dir):
+    os.makedirs(save_image_dir)
 
 cam = PiCamera()
 cam.resolution = (512, 304)
